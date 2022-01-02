@@ -121,6 +121,8 @@ fi
 . ~/.local/script/z.sh
 export RANGER_LOAD_DEFAULT_RC=false
 export LS_COLORS=$LS_COLORS:"ow=34"
+VISUAL=nvim; export VISUAL 
+EDITOR=nvim; export EDITOR
 
 # eval "$(oh-my-posh --init --shell bash --config ~/.poshthemes/mytheme.omp.json)"
 
