@@ -1,1 +1,0 @@
-ssh-keygen -t rsa -b 4096 -C "1209816754@qq.com" -f $HOME\.ssh\id_rsa -P -N ""
