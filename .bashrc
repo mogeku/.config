@@ -121,6 +121,7 @@ fi
 . ~/.local/script/z.sh
 export RANGER_LOAD_DEFAULT_RC=false
 export LS_COLORS=$LS_COLORS:"ow=34"
+export _Z_SRC=~/.local/script/z.sh
 VISUAL=nvim; export VISUAL 
 EDITOR=nvim; export EDITOR
 
