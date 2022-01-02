@@ -1,0 +1,7 @@
+YY9 Duowan.YY
+VMware_Workstation VMware.WorkstationPro
+Bitwarden Bitwarden.Bitwarden
+node node
+python2 python2
+python3 python3
+PotPlayer Daum.PotPlayer
