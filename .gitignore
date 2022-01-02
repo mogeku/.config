@@ -3,3 +3,4 @@ coc/
 configstore/
 wslu/
 trash*
+__pycache__
