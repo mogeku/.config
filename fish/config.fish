@@ -34,6 +34,11 @@ alias open=wsl-open
 alias vbrc='nvim ~/.bashrc'
 alias sbrc='source ~/.bashrc'
 alias ls='ls -F --color=auto'
+alias fda='fd -IH'
+alias ls=exa
+alias ll='exa -l'
+alias rg='rg -i'
+
 alias help='open $__fish_help_dir/index.html'
 alias vbrc='$EDITOR $__fish_config_dir/config.fish'
 alias sbrc='source $__fish_config_dir/config.fish'
