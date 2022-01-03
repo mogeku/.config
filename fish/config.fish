@@ -2,13 +2,6 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
 end
 
-alias lg=lazygit
-alias open=wsl-open
-alias vbrc='nvim ~/.bashrc'
-alias sbrc='source ~/.bashrc'
-alias ls='ls -F --color=auto'
-alias help='open /usr/share/doc/fish/index.html'
-
 set -gx RANGER_LOAD_DEFAULT_RC false
 set -gx GIT_SSL_NO_VERIFY 1
 set -gx VISUAL nvim
@@ -36,6 +29,15 @@ function ranger
 end
 
 alias ra ranger
+alias lg=lazygit
+alias open=wsl-open
+alias vbrc='nvim ~/.bashrc'
+alias sbrc='source ~/.bashrc'
+alias ls='ls -F --color=auto'
+alias help='open $__fish_help_dir/index.html'
+alias vbrc='$EDITOR $__fish_config_dir/config.fish'
+alias sbrc='source $__fish_config_dir/config.fish'
+
 
 
 if test $WSL_DISTRO_NAME
