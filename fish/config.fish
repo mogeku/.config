@@ -7,6 +7,7 @@ alias open=wsl-open
 alias vbrc='nvim ~/.bashrc'
 alias sbrc='source ~/.bashrc'
 alias ls='ls -F --color=auto'
+alias help='open /usr/share/doc/fish/index.html'
 
 set -gx RANGER_LOAD_DEFAULT_RC false
 set -gx GIT_SSL_NO_VERIFY 1
