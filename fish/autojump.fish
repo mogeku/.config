@@ -10,6 +10,9 @@ if not set -q OSTYPE
     set -gx OSTYPE (bash -c 'echo ${OSTYPE}')
 end
 
+if test $WSL_DISTRO_NAME
+    set -gx OSTYPE wsl
+end
 
 # enable tab completion
 complete -x -c j -a '(autojump --complete (commandline -t))'
@@ -44,7 +47,10 @@ end
 
 # default autojump command
 function j
+    echo $argv
     switch "$argv"
+        case ''
+            autojump -s
         case '-*' '--*'
             autojump $argv
         case '*'
@@ -84,6 +90,8 @@ function jo
     set -l output (autojump $argv)
     if test -d "$output"
         switch $OSTYPE
+            case 'wsl'
+                wsl-open (autojump $argv)
             case 'linux*'
                 xdg-open (autojump $argv)
             case 'darwin*'
