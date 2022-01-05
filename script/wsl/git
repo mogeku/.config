@@ -2,12 +2,17 @@
 
 if [[ "$(pwd)" == /mnt/* ]]
 then
-	output=$(git.exe "$@" | tr -d '\0')
-	if [[ $output == [A-Z]:/* ]]
+	if [[ "$*" == *rev-parse* ]]
 	then
-		echo -n $(wslpath -u $output)
+		output=$(git.exe "$@" | tr -d '\0')
+		if [[ $output == [A-Z]:/* ]]
+		then
+			echo -n $(wslpath -u $output)
+		else
+			echo -n "$output"
+		fi
 	else
-		echo -n "$output"
+		git.exe "$@"
 	fi
 else
     /usr/bin/git "$@"

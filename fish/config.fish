@@ -38,6 +38,7 @@ alias fda='fd -IH'
 alias ls=exa
 alias ll='exa -l'
 alias rg='rg -i'
+alias clion='clion64.exe'
 
 alias help='open $__fish_help_dir/index.html'
 alias vbrc='$EDITOR $__fish_config_dir/config.fish'
