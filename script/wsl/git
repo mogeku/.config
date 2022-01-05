@@ -1,0 +1,8 @@
+#!/bin/bash
+
+if [[ "$(pwd)" == /mnt/* ]]
+then
+    git.exe $*
+else
+    /usr/bin/git $*
+fi
