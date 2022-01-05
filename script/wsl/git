@@ -2,7 +2,13 @@
 
 if [[ "$(pwd)" == /mnt/* ]]
 then
-    git.exe $*
+	output=$(git.exe "$@")
+	if [[ $output == [A-Z]:/* ]]
+	then
+		echo -n $(wslpath -u $output)
+	else
+		echo -n "$output"
+	fi
 else
-    /usr/bin/git $*
+    /usr/bin/git "$@"
 fi
