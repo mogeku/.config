@@ -129,9 +129,12 @@ EDITOR=nvim; export EDITOR
 # export DISPLAY=$(awk '/nameserver / {print $2; exit}' /etc/resolv.conf 2>/dev/null):0
 # export LIBGL_ALWAYS_INDIRECT=1
 
+if [ ${WSL_DISTRO_NAME} ]; then
+    alias open=wsl-open
+fi
+
 alias ra='. ranger'
 alias lg=lazygit
-alias open=wsl-open
 alias vbrc='nvim ~/.bashrc'
 alias sbrc='source ~/.bashrc'
 alias ls='ls -aF --color=auto'

@@ -30,7 +30,6 @@ end
 
 alias ra ranger
 alias lg=lazygit
-alias open=wsl-open
 alias vbrc='nvim ~/.bashrc'
 alias sbrc='source ~/.bashrc'
 alias ls='ls -F --color=auto'
@@ -44,6 +43,9 @@ alias help='open $__fish_help_dir/index.html'
 alias vbrc='$EDITOR $__fish_config_dir/config.fish'
 alias sbrc='source $__fish_config_dir/config.fish'
 
+if test $WSL_DISTRO_NAME
+    alias open=wsl-open
+end
 
 # wsl系统设置
 if test $WSL_DISTRO_NAME
