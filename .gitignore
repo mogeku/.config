@@ -6,3 +6,11 @@ trash*
 __pycache__/
 
 lazygit/state.yml
+dconf/user
+dwm/
+enchant
+fcitx
+microsoft-edge-dev
+neofetch/config.conf
+pulse
+st/
