@@ -138,6 +138,7 @@ alias lg=lazygit
 alias vbrc='nvim ~/.bashrc'
 alias sbrc='source ~/.bashrc'
 alias ls='ls -aF --color=auto'
+alias open='xdg-open'
 
 # source ~/.config/autojump/autojump.bash
 

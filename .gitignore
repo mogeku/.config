@@ -1,3 +1,6 @@
+uTools/
+clash_win/
+Code/
 nvim/
 coc/
 configstore/
@@ -16,3 +19,11 @@ pulse
 st/
 mimeapps.list
 lazygit/.config
+
+user-dirs.locale
+user-dirs.dirs
+gnome-initial-setup-done
+htop/htoprc
+gtk-3.0/bookmarks
+evolution/sources/system-proxy.source
+autostart/cfw.desktop
