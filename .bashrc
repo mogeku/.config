@@ -141,4 +141,5 @@ alias ls='ls -aF --color=auto'
 alias open='xdg-open'
 
 # source ~/.config/autojump/autojump.bash
+[[ -s /home/momo/.autojump/etc/profile.d/autojump.sh ]] && source /home/momo/.autojump/etc/profile.d/autojump.sh
 
