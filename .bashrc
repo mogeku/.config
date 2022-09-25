@@ -139,7 +139,15 @@ alias vbrc='nvim ~/.bashrc'
 alias sbrc='source ~/.bashrc'
 alias ls='ls -aF --color=auto'
 alias open='xdg-open'
+alias explorer='nautilus'
+alias copy='xsel -b'
+alias ovpn='openvpn3-autoload --directory /etc/openvpn3/autoload/'
 
 # source ~/.config/autojump/autojump.bash
 [[ -s /home/momo/.autojump/etc/profile.d/autojump.sh ]] && source /home/momo/.autojump/etc/profile.d/autojump.sh
 
+source /opt/ros/noetic/setup.bash
+
+export robotCode=51E8DINVPW
+
+exec fish
