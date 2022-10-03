@@ -52,9 +52,15 @@ alias rg='rg -i'
 alias open='xdg-open'
 alias explorer='nautilus'
 alias copy='xsel -b'
-alias ovpn='openvpn3-autoload --directory /etc/openvpn3/autoload/'
+alias ovpn='sudo openvpn3-autoload --directory /etc/openvpn3/autoload/'
 
 alias help='open $__fish_help_dir/index.html'
 alias vbrc='$EDITOR $__fish_config_dir/config.fish'
 alias sbrc='source $__fish_config_dir/config.fish'
+alias quickrun='cd ~/project/quickRunDemo/;vim main.cpp;./clean_run.sh'
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+eval /home/momo/application/anaconda3/bin/conda "shell.fish" "hook" $argv | source
+# <<< conda initialize <<<
 
