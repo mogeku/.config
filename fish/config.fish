@@ -48,6 +48,8 @@ alias fda='fd -iH'
 alias ls=exa
 alias ll='exa -l'
 alias rg='rg -i'
+alias htime=hyperfine
+alias sc=shellcheck
 
 alias open='xdg-open'
 alias explorer='nautilus'
