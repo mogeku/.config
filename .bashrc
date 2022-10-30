@@ -137,17 +137,23 @@ alias ra='. ranger'
 alias lg=lazygit
 alias vbrc='nvim ~/.bashrc'
 alias sbrc='source ~/.bashrc'
-alias ls='ls -aF --color=auto'
+alias ls='exa'
+alias lsa='exa -a'
+alias ll='exa -l'
+alias lla='exa -la'
 alias open='xdg-open'
 alias explorer='nautilus'
 alias copy='xsel -b'
 alias ovpn='openvpn3-autoload --directory /etc/openvpn3/autoload/'
+alias dmenu_run='dmenu_run -fn "JetBrainsMono Nerd Font Mono:size=20"'
+alias dmenu='dmenu -fn "JetBrainsMono Nerd Font Mono:size=20"'
 
 # source ~/.config/autojump/autojump.bash
 [[ -s /home/momo/.autojump/etc/profile.d/autojump.sh ]] && source /home/momo/.autojump/etc/profile.d/autojump.sh
 
-source /opt/ros/noetic/setup.bash
+# source /opt/ros/noetic/setup.bash
 
 export robotCode=51E8DINVPW
+export https_proxy=http://127.0.0.1:7890;export http_proxy=http://127.0.0.1:7890;export all_proxy=socks5://127.0.0.1:7890
 
-exec fish
+

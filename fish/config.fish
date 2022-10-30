@@ -45,11 +45,13 @@ alias vbrc='nvim ~/.bashrc'
 alias sbrc='source ~/.bashrc'
 alias ls='ls -f --color=auto'
 alias fda='fd -iH'
-alias ls=exa
-alias ll='exa -l'
+alias ls='exa --color auto'
+alias ll='exa --color auto -l'
 alias rg='rg -i'
 alias htime=hyperfine
 alias sc=shellcheck
+alias dmenu_run='dmenu_run -fn "JetBrainsMono Nerd Font Mono:size=20"'
+alias dmenu='dmenu -fn "JetBrainsMono Nerd Font Mono:size=20"'
 
 alias open='xdg-open'
 alias explorer='nautilus'
@@ -60,6 +62,9 @@ alias help='open $__fish_help_dir/index.html'
 alias vbrc='$EDITOR $__fish_config_dir/config.fish'
 alias sbrc='source $__fish_config_dir/config.fish'
 alias quickrun='cd ~/project/quickRunDemo/;vim main.cpp;./clean_run.sh'
+
+export https_proxy=http://127.0.0.1:7890;export http_proxy=http://127.0.0.1:7890;export all_proxy=socks5://127.0.0.1:7890
+
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
