@@ -119,7 +119,7 @@ fi
 
 # My setting
 export RANGER_LOAD_DEFAULT_RC=false
-export LS_COLORS=$LS_COLORS:"ow=34"
+#export LS_COLORS=$LS_COLORS:"ow=34"
 export GIT_SSL_NO_VERIFY=1
 VISUAL=nvim; export VISUAL 
 EDITOR=nvim; export EDITOR
@@ -137,7 +137,7 @@ alias ra='. ranger'
 alias lg=lazygit
 alias vbrc='nvim ~/.bashrc'
 alias sbrc='source ~/.bashrc'
-alias ls='exa'
+#alias ls='exa'
 alias lsa='exa -a'
 alias ll='exa -l'
 alias lla='exa -la'
@@ -153,7 +153,7 @@ alias dmenu='dmenu -fn "JetBrainsMono Nerd Font Mono:size=20"'
 
 # source /opt/ros/noetic/setup.bash
 
-export robotCode=51E8DINVPW
-export https_proxy=http://127.0.0.1:7890;export http_proxy=http://127.0.0.1:7890;export all_proxy=socks5://127.0.0.1:7890
+#export robotCode=51E8DINVPW
+#export https_proxy=http://127.0.0.1:7890;export http_proxy=http://127.0.0.1:7890;export all_proxy=socks5://127.0.0.1:7890
 
 
