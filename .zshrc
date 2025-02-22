@@ -89,10 +89,15 @@ source $ZSH/oh-my-zsh.sh
 # export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
+export RANGER_LOAD_DEFAULT_RC=false
+export GIT_SSL_NO_VERIFY=1
+
 if [[ -n $SSH_CONNECTION ]]; then
-    export EDITOR='vim'
+  export EDITOR='vim'
+  export VISUAL='vim'
 else
-    export EDITOR='vim'
+  export EDITOR='nvim'
+  export VISUAL='nvim'
 fi
 
 # Compilation flags
@@ -109,42 +114,26 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#FFC0CB,bold,underline"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-alias ra='. ranger'
+#alias ra='. ranger'
 alias lg=lazygit
-alias vbrc='nvim ~/.zshrc'
+alias vbrc='$EDITOR ~/.zshrc'
 alias sbrc='source ~/.zshrc'
-alias ls='exa'
-alias la='exa -a'
-alias ll='exa -l'
-alias lla='exa -la'
+alias ls='eza'
+alias lsa='eza -a'
+alias ll='eza -l'
+alias lla='eza -la'
 alias open='xdg-open'
 alias explorer='nautilus'
 alias copy='xsel -b'
-alias ovpn='openvpn3-autoload --directory /etc/openvpn3/autoload/'
-alias dmenu_run='dmenu_run -fn "JetBrainsMono Nerd Font Mono:size=20"'
-alias dmenu='dmenu -fn "JetBrainsMono Nerd Font Mono:size=20"'
 
-[[ -s /home/momo/.autojump/etc/profile.d/autojump.sh ]] && source /home/momo/.autojump/etc/profile.d/autojump.sh
+function y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+	yazi "$@" --cwd-file="$tmp"
+	if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+		builtin cd -- "$cwd"
+	fi
+	rm -f -- "$tmp"
+}
 
-# source /opt/ros/noetic/setup.bash
-
-export robotCode=51E8DINVPW
-export https_proxy=http://127.0.0.1:7890;export http_proxy=http://127.0.0.1:7890;export all_proxy=socks5://127.0.0.1:7890
-
-
-
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/momo/application/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/home/momo/application/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/momo/application/anaconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/home/momo/application/anaconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
-
+#[[ -s /home/momo/.autojump/etc/profile.d/autojump.sh ]] && source /home/momo/.autojump/etc/profile.d/autojump.sh
+eval "$(zoxide init zsh)"

@@ -53,3 +53,15 @@ edit
 query
 lazygit/yolov5/Oct 26 18.06.43.345905208.patch
 lazygit/yolov5/Oct 26 18.06.44.199586879.patch
+Cursor
+fcitx5
+ibus/bus
+systemd/user/timers.target.wants
+tabby
+tiling-assistant
+.gsd-keyboard.settings-ported
+GNOME-xdg-terminals.list
+monitors.xml
+monitors.xml~
+ubuntu-xdg-terminals.list
+xdg-terminals.list

@@ -1,0 +1,9 @@
+# keymap.toml
+[manager]
+prepend_keymap = [
+	# ...
+  { on = "z",          run = "plugin my-zoxide",                desc = "Jump to a directory via my-zoxide" },
+  { on = [ "g", "i" ], run  = "plugin lazygit",                 desc = "run lazygit"},
+]
+append_keymap = [
+]
